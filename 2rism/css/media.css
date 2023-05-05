@@ -1,0 +1,165 @@
+@media (max-width: 1200px) {
+    .form {
+        width: auto;
+        height: auto;
+    }
+
+    .easepick-wrapper {
+        z-index: 1;
+    }
+
+    .form__input--when {
+        width: 200px;
+    }
+
+    .form__input--guests {
+        width: 140px;
+    }
+
+    .form__input--activity {
+        width: 180px;
+    }
+
+    .autoComplete_wrapper>input {
+        width: auto !important;
+    }
+
+
+    .cards--tips {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards-item--tips {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 1139px) {
+    .header {
+        height: auto;
+        min-height: 500px;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .container--header {
+        justify-content: flex-start;
+        row-gap: 90px;
+    }
+
+    .header__title {
+        font-size: 32px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav__user {
+        display: none;
+    }
+
+    .mobile-nav-btn {
+        display: block;
+    }
+
+    .main {
+        gap: 60px;
+        padding: 40px 0;
+    }
+
+    .section__header {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .cards--dest {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards--hotels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+@media (max-width: 1040px) {
+    .form {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .form__input-wrapper {
+        width: 100%;
+    }
+
+    .btn--search {
+        width: 100%;
+    }
+
+    .about-us,
+    .about-us__content {
+        gap: 24px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer__row {
+        grid-template-columns: 1fr 3fr;    
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .cards {
+        gap: 16px;
+    }
+
+    .cards--dest {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards--hotels {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards-item--tips {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards__img--tips {
+        height: 100%;
+    }
+
+    .cards__title--tips {
+        font-size: 16px;
+    }
+
+    .cards__descr {
+        font-size: 14px;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us__img {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 440px) {
+    .cards--dest {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

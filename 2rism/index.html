@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2rism</title>
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/media.css">
+    <link rel="stylesheet" href="/libs/autoComplete/css/autoComplete.01.css">
+    <link rel="stylesheet" href="/libs/custom-select/custom-select.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container--header">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <img src="/img/logo/2rism-logo.svg" alt="2Rism">
+                </a>
+                <ul class="nav-list list-reset">
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link nav-list__link--active">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">
+                            hotels
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">
+                            restaurants
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">
+                            tours
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">
+                            destinations
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">
+                            activities
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav__user">
+                    <div class="user">
+                        <div class="user-content">
+                            <span class="user__greeting">
+                                Holla,
+                            </span>
+                            <span class="user__name">
+                                Ales Nesetril
+                            </span>
+                        </div>
+                        <div class="user-img">
+                            <img class="user-avatar-img" src="/img/Header/header-user-avatar.jpg" alt="Avatar">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="mobile-nav-btn btn-reset">
+                    <div class="nav-icon">
+
+                    </div>
+                </button>
+            </nav>
+            <div class="header__content">
+                <h1 class="header__title">
+                    Discover the most engaging places
+                </h1>
+                <button class="btn btn-reset btn--huge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM7.71 17.667C6.72341 15.5743 6.15187 13.3102 6.027 11H2.062C2.25659 12.5389 2.89392 13.9882 3.89657 15.1717C4.89922 16.3552 6.22401 17.2221 7.71 17.667ZM8.03 11C8.181 13.439 8.878 15.73 10 17.752C11.1523 15.6766 11.8254 13.3695 11.97 11H8.03ZM17.938 11H13.973C13.8481 13.3102 13.2766 15.5743 12.29 17.667C13.776 17.2221 15.1008 16.3552 16.1034 15.1717C17.1061 13.9882 17.7434 12.5389 17.938 11ZM2.062 9H6.027C6.15187 6.68979 6.72341 4.42569 7.71 2.333C6.22401 2.77788 4.89922 3.64475 3.89657 4.8283C2.89392 6.01184 2.25659 7.4611 2.062 9ZM8.031 9H11.969C11.8248 6.6306 11.152 4.32353 10 2.248C8.84768 4.32345 8.17456 6.63052 8.03 9H8.031ZM12.29 2.333C13.2766 4.42569 13.8481 6.68979 13.973 9H17.938C17.7434 7.4611 17.1061 6.01184 16.1034 4.8283C15.1008 3.64475 13.776 2.77788 12.29 2.333Z"
+                            fill="white" />
+                    </svg>
+                    Discover on 3D Globe
+                </button>
+            </div>
+            <form action="" class="form">
+                <div class="form__input-wrapper form__input--location">
+                    <label for="location" class="form__label">Location</label>
+                    <input autocomplete="off" type="text" class="form__input input-reset" id="location"
+                        placeholder="Explore nearby destinations">
+                </div>
+                <div class="form__input-wrapper form__input--activity">
+                    <label for="activity" class="form__label">Activity</label>
+                    <select name="activity" id="activity" class="form__select">
+                        <option value="All">All Activities</option>
+                        <option value="Culture">Culture</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Extreme">Extreme</option>
+                    </select>
+                </div>
+                <div class="form__input-wrapper form__input--date">
+                    <label for="date" class="form__label">When</label>
+                    <input type="text" class="form__input input-reset" id="date" placeholder="Choose a Date">
+                </div>
+                <div class="form__input-wrapper form__input--guests">
+                    <label for="guests" class="form__label">Guests</label>
+                    <select name="guests" id="guests" class="form__select">
+                        <option value="1 guest">1 guest</option>
+                        <option value="2 guest">2 guest</option>
+                        <option value="3 guest">3 guest</option>
+                        <option value="4 guest">4 guests or more</option>
+                    </select>
+                </div>
+                <button class="btn btn--search btn-reset">
+                    <img src="/img/Iqons/hero-search-iqon.svg" alt="Search">
+                </button>
+            </form>
+        </div>
+    </header>
+    <div class="mobile-nav-fade"></div>
+    <div class="mobile-nav">
+        <ul class="mobile-nav__list list-reset">
+            <li>
+                <a href="#" class="active">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Hotels
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Restaurants
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Tours
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Destinations
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Activities
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main class="main">
+        <!-- Popular -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="title">
+                        Popular Destinations
+                    </h2>
+                </div>
+                <ul class="section__list cards cards--dest list-reset">
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img" src="/img/Popular/Popular Destinations-01.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Big Sur
+                            </h3>
+                            <a href="#" class="cards__location">
+                                California, USA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img" src="/img/Popular/Popular Destinations-02.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Prescott
+                            </h3>
+                            <a href="#" class="cards__location">
+                                Arizona, USA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img" src="/img/Popular/Popular Destinations-03.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Fort Mayers
+                            </h3>
+                            <a href="#" class="cards__location">
+                                Florida, USA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img" src="/img/Popular/Popular Destinations-04.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Tucson
+                            </h3>
+                            <a href="#" class="cards__location">
+                                Arizona, USA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img" src="/img/Popular/Popular Destinations-05.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                St. Joseph
+                            </h3>
+                            <a href="#" class="cards__location">
+                                Michigan, USA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img" src="/img/Popular/Popular Destinations-06.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Madrid
+                            </h3>
+                            <a href="#" class="cards__location">
+                                Spain
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Hotels -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="title">
+                        Hotels and Restaurants
+                    </h2>
+                    <a href="#" class="btn-more">
+                        View all
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.4767 9.16664L9.00671 4.69664L10.185 3.51831L16.6667 9.99998L10.185 16.4816L9.00671 15.3033L13.4767 10.8333H3.33337V9.16664H13.4767Z"
+                                fill="#5243C2" />
+                        </svg>
+                    </a>
+                </div>
+                <ul class="section__list cards cards--hotels list-reset">
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--hotels" src="/img/Hotels/Hotels and Restaurants-01.jpg"
+                            alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title cards__title--hotels">
+                                Monastero Santa Rosa Hotel & Spa
+                            </h3>
+                            <footer class="cards__footer">
+                                <a href="#" class="cards__location cards__location--iqon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8 13.9334L11.3 10.6334C11.9526 9.98078 12.397 9.14926 12.577 8.24403C12.7571 7.33879 12.6646 6.40051 12.3114 5.54781C11.9582 4.69512 11.36 3.96631 10.5926 3.45356C9.82519 2.9408 8.92296 2.66711 8 2.66711C7.07704 2.66711 6.17481 2.9408 5.40739 3.45356C4.63997 3.96631 4.04183 4.69512 3.68861 5.54781C3.33539 6.40051 3.24294 7.33879 3.42297 8.24403C3.603 9.14926 4.04741 9.98078 4.7 10.6334L8 13.9334ZM8 15.8188L3.75734 11.5761C2.91823 10.737 2.34679 9.66789 2.11529 8.50401C1.88378 7.34013 2.0026 6.13373 2.45673 5.03738C2.91086 3.94103 3.6799 3.00396 4.66659 2.34467C5.65328 1.68539 6.81332 1.3335 8 1.3335C9.18669 1.3335 10.3467 1.68539 11.3334 2.34467C12.3201 3.00396 13.0891 3.94103 13.5433 5.03738C13.9974 6.13373 14.1162 7.34013 13.8847 8.50401C13.6532 9.66789 13.0818 10.737 12.2427 11.5761L8 15.8188V15.8188ZM8 8.66678C8.35362 8.66678 8.69276 8.5263 8.94281 8.27625C9.19286 8.0262 9.33334 7.68707 9.33334 7.33344C9.33334 6.97982 9.19286 6.64068 8.94281 6.39063C8.69276 6.14059 8.35362 6.00011 8 6.00011C7.64638 6.00011 7.30724 6.14059 7.05719 6.39063C6.80714 6.64068 6.66667 6.97982 6.66667 7.33344C6.66667 7.68707 6.80714 8.0262 7.05719 8.27625C7.30724 8.5263 7.64638 8.66678 8 8.66678ZM8 10.0001C7.29276 10.0001 6.61448 9.71916 6.11438 9.21906C5.61429 8.71896 5.33334 8.04069 5.33334 7.33344C5.33334 6.6262 5.61429 5.94792 6.11438 5.44783C6.61448 4.94773 7.29276 4.66678 8 4.66678C8.70725 4.66678 9.38552 4.94773 9.88562 5.44783C10.3857 5.94792 10.6667 6.6262 10.6667 7.33344C10.6667 8.04069 10.3857 8.71896 9.88562 9.21906C9.38552 9.71916 8.70725 10.0001 8 10.0001Z"
+                                            fill="#979797" />
+                                    </svg>
+                                    Salerno, Italy
+                                </a>
+                                <div class="cards__rating">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                </div>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--hotels" src="/img/Hotels/Hotels and Restaurants-02.jpg"
+                            alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title cards__title--hotels">
+                                Grand Hotel Tremezzo
+                            </h3>
+                            <footer class="cards__footer">
+                                <a href="#" class="cards__location cards__location--iqon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8 13.9334L11.3 10.6334C11.9526 9.98078 12.397 9.14926 12.577 8.24403C12.7571 7.33879 12.6646 6.40051 12.3114 5.54781C11.9582 4.69512 11.36 3.96631 10.5926 3.45356C9.82519 2.9408 8.92296 2.66711 8 2.66711C7.07704 2.66711 6.17481 2.9408 5.40739 3.45356C4.63997 3.96631 4.04183 4.69512 3.68861 5.54781C3.33539 6.40051 3.24294 7.33879 3.42297 8.24403C3.603 9.14926 4.04741 9.98078 4.7 10.6334L8 13.9334ZM8 15.8188L3.75734 11.5761C2.91823 10.737 2.34679 9.66789 2.11529 8.50401C1.88378 7.34013 2.0026 6.13373 2.45673 5.03738C2.91086 3.94103 3.6799 3.00396 4.66659 2.34467C5.65328 1.68539 6.81332 1.3335 8 1.3335C9.18669 1.3335 10.3467 1.68539 11.3334 2.34467C12.3201 3.00396 13.0891 3.94103 13.5433 5.03738C13.9974 6.13373 14.1162 7.34013 13.8847 8.50401C13.6532 9.66789 13.0818 10.737 12.2427 11.5761L8 15.8188V15.8188ZM8 8.66678C8.35362 8.66678 8.69276 8.5263 8.94281 8.27625C9.19286 8.0262 9.33334 7.68707 9.33334 7.33344C9.33334 6.97982 9.19286 6.64068 8.94281 6.39063C8.69276 6.14059 8.35362 6.00011 8 6.00011C7.64638 6.00011 7.30724 6.14059 7.05719 6.39063C6.80714 6.64068 6.66667 6.97982 6.66667 7.33344C6.66667 7.68707 6.80714 8.0262 7.05719 8.27625C7.30724 8.5263 7.64638 8.66678 8 8.66678ZM8 10.0001C7.29276 10.0001 6.61448 9.71916 6.11438 9.21906C5.61429 8.71896 5.33334 8.04069 5.33334 7.33344C5.33334 6.6262 5.61429 5.94792 6.11438 5.44783C6.61448 4.94773 7.29276 4.66678 8 4.66678C8.70725 4.66678 9.38552 4.94773 9.88562 5.44783C10.3857 5.94792 10.6667 6.6262 10.6667 7.33344C10.6667 8.04069 10.3857 8.71896 9.88562 9.21906C9.38552 9.71916 8.70725 10.0001 8 10.0001Z"
+                                            fill="#979797" />
+                                    </svg>
+                                    Lake Como, Italy
+                                </a>
+                                <div class="cards__rating">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-star.svg" alt="rating-star">
+                                </div>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--hotels" src="/img/Hotels/Hotels and Restaurants-03.jpg"
+                            alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title cards__title--hotels">
+                                The Oberoi Udaivilas, Udaipur
+                            </h3>
+                            <footer class="cards__footer">
+                                <a href="#" class="cards__location cards__location--iqon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8 13.9334L11.3 10.6334C11.9526 9.98078 12.397 9.14926 12.577 8.24403C12.7571 7.33879 12.6646 6.40051 12.3114 5.54781C11.9582 4.69512 11.36 3.96631 10.5926 3.45356C9.82519 2.9408 8.92296 2.66711 8 2.66711C7.07704 2.66711 6.17481 2.9408 5.40739 3.45356C4.63997 3.96631 4.04183 4.69512 3.68861 5.54781C3.33539 6.40051 3.24294 7.33879 3.42297 8.24403C3.603 9.14926 4.04741 9.98078 4.7 10.6334L8 13.9334ZM8 15.8188L3.75734 11.5761C2.91823 10.737 2.34679 9.66789 2.11529 8.50401C1.88378 7.34013 2.0026 6.13373 2.45673 5.03738C2.91086 3.94103 3.6799 3.00396 4.66659 2.34467C5.65328 1.68539 6.81332 1.3335 8 1.3335C9.18669 1.3335 10.3467 1.68539 11.3334 2.34467C12.3201 3.00396 13.0891 3.94103 13.5433 5.03738C13.9974 6.13373 14.1162 7.34013 13.8847 8.50401C13.6532 9.66789 13.0818 10.737 12.2427 11.5761L8 15.8188V15.8188ZM8 8.66678C8.35362 8.66678 8.69276 8.5263 8.94281 8.27625C9.19286 8.0262 9.33334 7.68707 9.33334 7.33344C9.33334 6.97982 9.19286 6.64068 8.94281 6.39063C8.69276 6.14059 8.35362 6.00011 8 6.00011C7.64638 6.00011 7.30724 6.14059 7.05719 6.39063C6.80714 6.64068 6.66667 6.97982 6.66667 7.33344C6.66667 7.68707 6.80714 8.0262 7.05719 8.27625C7.30724 8.5263 7.64638 8.66678 8 8.66678ZM8 10.0001C7.29276 10.0001 6.61448 9.71916 6.11438 9.21906C5.61429 8.71896 5.33334 8.04069 5.33334 7.33344C5.33334 6.6262 5.61429 5.94792 6.11438 5.44783C6.61448 4.94773 7.29276 4.66678 8 4.66678C8.70725 4.66678 9.38552 4.94773 9.88562 5.44783C10.3857 5.94792 10.6667 6.6262 10.6667 7.33344C10.6667 8.04069 10.3857 8.71896 9.88562 9.21906C9.38552 9.71916 8.70725 10.0001 8 10.0001Z"
+                                            fill="#979797" />
+                                    </svg>
+                                    Udaipur, India
+                                </a>
+                                <div class="cards__rating">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-star.svg" alt="rating-star">
+                                </div>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="cards-item cards__item--dest">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--hotels" src="/img/Hotels/Hotels and Restaurants-04.jpg"
+                            alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title cards__title--hotels">
+                                AKA Beverly Hills
+                            </h3>
+                            <footer class="cards__footer">
+                                <a href="#" class="cards__location cards__location--iqon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8 13.9334L11.3 10.6334C11.9526 9.98078 12.397 9.14926 12.577 8.24403C12.7571 7.33879 12.6646 6.40051 12.3114 5.54781C11.9582 4.69512 11.36 3.96631 10.5926 3.45356C9.82519 2.9408 8.92296 2.66711 8 2.66711C7.07704 2.66711 6.17481 2.9408 5.40739 3.45356C4.63997 3.96631 4.04183 4.69512 3.68861 5.54781C3.33539 6.40051 3.24294 7.33879 3.42297 8.24403C3.603 9.14926 4.04741 9.98078 4.7 10.6334L8 13.9334ZM8 15.8188L3.75734 11.5761C2.91823 10.737 2.34679 9.66789 2.11529 8.50401C1.88378 7.34013 2.0026 6.13373 2.45673 5.03738C2.91086 3.94103 3.6799 3.00396 4.66659 2.34467C5.65328 1.68539 6.81332 1.3335 8 1.3335C9.18669 1.3335 10.3467 1.68539 11.3334 2.34467C12.3201 3.00396 13.0891 3.94103 13.5433 5.03738C13.9974 6.13373 14.1162 7.34013 13.8847 8.50401C13.6532 9.66789 13.0818 10.737 12.2427 11.5761L8 15.8188V15.8188ZM8 8.66678C8.35362 8.66678 8.69276 8.5263 8.94281 8.27625C9.19286 8.0262 9.33334 7.68707 9.33334 7.33344C9.33334 6.97982 9.19286 6.64068 8.94281 6.39063C8.69276 6.14059 8.35362 6.00011 8 6.00011C7.64638 6.00011 7.30724 6.14059 7.05719 6.39063C6.80714 6.64068 6.66667 6.97982 6.66667 7.33344C6.66667 7.68707 6.80714 8.0262 7.05719 8.27625C7.30724 8.5263 7.64638 8.66678 8 8.66678ZM8 10.0001C7.29276 10.0001 6.61448 9.71916 6.11438 9.21906C5.61429 8.71896 5.33334 8.04069 5.33334 7.33344C5.33334 6.6262 5.61429 5.94792 6.11438 5.44783C6.61448 4.94773 7.29276 4.66678 8 4.66678C8.70725 4.66678 9.38552 4.94773 9.88562 5.44783C10.3857 5.94792 10.6667 6.6262 10.6667 7.33344C10.6667 8.04069 10.3857 8.71896 9.88562 9.21906C9.38552 9.71916 8.70725 10.0001 8 10.0001Z" />
+                                    </svg>
+                                    Los Angeles, United States
+                                </a>
+                                <div class="cards__rating">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-fill-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-star.svg" alt="rating-star">
+                                    <img src="/img/Iqons/rating-star.svg" alt="rating-star">
+                                </div>
+                            </footer>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Travel Tips and Advice -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="title">
+                        Travel Tips and Advice
+                    </h2>
+                    <a href="#" class="btn-more">
+                        View all
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.4767 9.16664L9.00671 4.69664L10.185 3.51831L16.6667 9.99998L10.185 16.4816L9.00671 15.3033L13.4767 10.8333H3.33337V9.16664H13.4767Z"
+                                fill="#5243C2" />
+                        </svg>
+                    </a>
+                </div>
+                <ul class="section__list cards cards--tips list-reset">
+                    <li class="cards-item cards-item--tips">
+                        <img class="cards__img cards__img--tips" src="/img/Tips/Travel Tips and Advice-01.jpg" alt="">
+                        <div class="cards__item-content cards__item-content--tips">
+                            <h3 class="cards__title cards__title--tips">
+                                East Village Ice Cream Crawl
+                            </h3>
+                            <p class="cards__descr">
+                                We will stop at five different world-class ice cream shops on this 1.5 mile 1.5 hour
+                                tour. At each ice cream store we'll explore the story behind the business and see what
+                                makes the ice cream unique as you savor every…
+                            </p>
+                            <footer class="cards__footer cards__footer--tips">
+                                <a href="#" class="cards__footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3333 2.66659H14C14.1768 2.66659 14.3464 2.73682 14.4714 2.86185C14.5964 2.98687 14.6667 3.15644 14.6667 3.33325V13.9999C14.6667 14.1767 14.5964 14.3463 14.4714 14.4713C14.3464 14.5963 14.1768 14.6666 14 14.6666H2C1.82319 14.6666 1.65362 14.5963 1.52859 14.4713C1.40357 14.3463 1.33333 14.1767 1.33333 13.9999V3.33325C1.33333 3.15644 1.40357 2.98687 1.52859 2.86185C1.65362 2.73682 1.82319 2.66659 2 2.66659H4.66667V1.33325H6V2.66659H10V1.33325H11.3333V2.66659ZM13.3333 7.99992H2.66667V13.3333H13.3333V7.99992ZM10 3.99992H6V5.33325H4.66667V3.99992H2.66667V6.66659H13.3333V3.99992H11.3333V5.33325H10V3.99992ZM4 9.33325H5.33333V10.6666H4V9.33325ZM7.33333 9.33325H8.66667V10.6666H7.33333V9.33325ZM10.6667 9.33325H12V10.6666H10.6667V9.33325Z" />
+                                    </svg>
+                                    Today
+                                </a>
+                                <a href="#" class="cards__footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.66666 14.6667C2.66666 13.2523 3.22857 11.8957 4.22876 10.8955C5.22896 9.89532 6.58551 9.33342 8 9.33342C9.41448 9.33342 10.771 9.89532 11.7712 10.8955C12.7714 11.8957 13.3333 13.2523 13.3333 14.6667H12C12 13.6059 11.5786 12.5885 10.8284 11.8383C10.0783 11.0882 9.06086 10.6667 8 10.6667C6.93913 10.6667 5.92172 11.0882 5.17157 11.8383C4.42142 12.5885 4 13.6059 4 14.6667H2.66666ZM8 8.66675C5.79 8.66675 4 6.87675 4 4.66675C4 2.45675 5.79 0.666748 8 0.666748C10.21 0.666748 12 2.45675 12 4.66675C12 6.87675 10.21 8.66675 8 8.66675ZM8 7.33342C9.47333 7.33342 10.6667 6.14008 10.6667 4.66675C10.6667 3.19341 9.47333 2.00008 8 2.00008C6.52666 2.00008 5.33333 3.19341 5.33333 4.66675C5.33333 6.14008 6.52666 7.33342 8 7.33342Z" />
+                                    </svg>
+
+                                    Maria Philips
+                                </a>
+                                <a href="#" class="cards__footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_8531_383)">
+                                            <path
+                                                d="M4.86067 13.8826L1.33334 14.6666L2.11734 11.1393C1.60102 10.1735 1.33169 9.09502 1.33334 7.99992C1.33334 4.31792 4.318 1.33325 8 1.33325C11.682 1.33325 14.6667 4.31792 14.6667 7.99992C14.6667 11.6819 11.682 14.6666 8 14.6666C6.90491 14.6682 5.82641 14.3989 4.86067 13.8826ZM5.054 12.4739L5.48934 12.7073C6.2617 13.12 7.12426 13.3351 8 13.3333C9.05484 13.3333 10.086 13.0205 10.963 12.4344C11.8401 11.8484 12.5237 11.0154 12.9274 10.0409C13.331 9.06636 13.4366 7.994 13.2309 6.95944C13.0251 5.92487 12.5171 4.97456 11.7712 4.22868C11.0254 3.4828 10.075 2.97485 9.04048 2.76906C8.00592 2.56328 6.93356 2.66889 5.95902 3.07256C4.98449 3.47623 4.15153 4.15982 3.5655 5.03688C2.97946 5.91394 2.66667 6.94509 2.66667 7.99992C2.66667 8.88925 2.88334 9.74525 3.29334 10.5106L3.526 10.9459L3.08934 12.9106L5.054 12.4739Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8531_383">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    2
+                                </a>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="cards-item cards-item--tips">
+                        <img class="cards__img cards__img--tips" src="/img/Tips/Travel Tips and Advice-02.jpg" alt="">
+                        <div class="cards__item-content cards__item-content--tips">
+                            <h3 class="cards__title cards__title--tips">
+                                Brooklyn Bridge cinematic photo walk
+                            </h3>
+                            <p class="cards__descr">
+                                This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, but I’m
+                                always open to capture clients at different locations upon request for an additional
+                                charge.
+                            </p>
+                            <footer class="cards__footer cards__footer--tips">
+                                <a href="#" class="cards__footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3333 2.66659H14C14.1768 2.66659 14.3464 2.73682 14.4714 2.86185C14.5964 2.98687 14.6667 3.15644 14.6667 3.33325V13.9999C14.6667 14.1767 14.5964 14.3463 14.4714 14.4713C14.3464 14.5963 14.1768 14.6666 14 14.6666H2C1.82319 14.6666 1.65362 14.5963 1.52859 14.4713C1.40357 14.3463 1.33333 14.1767 1.33333 13.9999V3.33325C1.33333 3.15644 1.40357 2.98687 1.52859 2.86185C1.65362 2.73682 1.82319 2.66659 2 2.66659H4.66667V1.33325H6V2.66659H10V1.33325H11.3333V2.66659ZM13.3333 7.99992H2.66667V13.3333H13.3333V7.99992ZM10 3.99992H6V5.33325H4.66667V3.99992H2.66667V6.66659H13.3333V3.99992H11.3333V5.33325H10V3.99992ZM4 9.33325H5.33333V10.6666H4V9.33325ZM7.33333 9.33325H8.66667V10.6666H7.33333V9.33325ZM10.6667 9.33325H12V10.6666H10.6667V9.33325Z" />
+                                    </svg>
+                                    Today
+                                </a>
+                                <a href="#" class="cards__footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.66666 14.6667C2.66666 13.2523 3.22857 11.8957 4.22876 10.8955C5.22896 9.89532 6.58551 9.33342 8 9.33342C9.41448 9.33342 10.771 9.89532 11.7712 10.8955C12.7714 11.8957 13.3333 13.2523 13.3333 14.6667H12C12 13.6059 11.5786 12.5885 10.8284 11.8383C10.0783 11.0882 9.06086 10.6667 8 10.6667C6.93913 10.6667 5.92172 11.0882 5.17157 11.8383C4.42142 12.5885 4 13.6059 4 14.6667H2.66666ZM8 8.66675C5.79 8.66675 4 6.87675 4 4.66675C4 2.45675 5.79 0.666748 8 0.666748C10.21 0.666748 12 2.45675 12 4.66675C12 6.87675 10.21 8.66675 8 8.66675ZM8 7.33342C9.47333 7.33342 10.6667 6.14008 10.6667 4.66675C10.6667 3.19341 9.47333 2.00008 8 2.00008C6.52666 2.00008 5.33333 3.19341 5.33333 4.66675C5.33333 6.14008 6.52666 7.33342 8 7.33342Z" />
+                                    </svg>
+                                    James Calzoni
+                                </a>
+                                <a href="#" class="cards__footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_8531_383)">
+                                            <path
+                                                d="M4.86067 13.8826L1.33334 14.6666L2.11734 11.1393C1.60102 10.1735 1.33169 9.09502 1.33334 7.99992C1.33334 4.31792 4.318 1.33325 8 1.33325C11.682 1.33325 14.6667 4.31792 14.6667 7.99992C14.6667 11.6819 11.682 14.6666 8 14.6666C6.90491 14.6682 5.82641 14.3989 4.86067 13.8826ZM5.054 12.4739L5.48934 12.7073C6.2617 13.12 7.12426 13.3351 8 13.3333C9.05484 13.3333 10.086 13.0205 10.963 12.4344C11.8401 11.8484 12.5237 11.0154 12.9274 10.0409C13.331 9.06636 13.4366 7.994 13.2309 6.95944C13.0251 5.92487 12.5171 4.97456 11.7712 4.22868C11.0254 3.4828 10.075 2.97485 9.04048 2.76906C8.00592 2.56328 6.93356 2.66889 5.95902 3.07256C4.98449 3.47623 4.15153 4.15982 3.5655 5.03688C2.97946 5.91394 2.66667 6.94509 2.66667 7.99992C2.66667 8.88925 2.88334 9.74525 3.29334 10.5106L3.526 10.9459L3.08934 12.9106L5.054 12.4739Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8531_383">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    17
+                                </a>
+                            </footer>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Activities -->
+        <section class="section ">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="title">
+                        Activities
+                    </h2>
+                    <a href="#" class="btn-more">
+                        View all
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.4767 9.16664L9.00671 4.69664L10.185 3.51831L16.6667 9.99998L10.185 16.4816L9.00671 15.3033L13.4767 10.8333H3.33337V9.16664H13.4767Z"
+                                fill="#5243C2" />
+                        </svg>
+                    </a>
+                </div>
+                <ul class="section__list cards cards--hotels list-reset">
+                    <li class="cards-item ">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--activities" src="/img/Activity/Activities-01.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Sailing
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="cards-item">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--activities" src="/img/Activity/Activities-02.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Climbing
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="cards-item">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--activities" src="/img/Activity/Activities-03.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Skiing
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="cards-item">
+                        <a href="#" class="card__link"></a>
+                        <img class="cards__img cards__img--activities" src="/img/Activity/Activities-04.jpg" alt="">
+                        <div class="cards__item-content">
+                            <h3 class="cards__title">
+                                Hiking
+                            </h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="about-us">
+                    <div class="about-us__content">
+                        <h2 class="title">
+                            About Us
+                        </h2>
+                        <p class="about-us__descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a sapien justo. Nulla
+                            facilisis tristique imperdiet. Nullam a placerat odio. Sed in ex augue. Aliquam porta
+                            consectetur lorem sit amet ultrices. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos.
+                        </p>
+                        <div class="about-us__btn">
+                            <a href="#" class="btn-more">
+                                Read more
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.4767 9.16664L9.00671 4.69664L10.185 3.51831L16.6667 9.99998L10.185 16.4816L9.00671 15.3033L13.4767 10.8333H3.33337V9.16664H13.4767Z"
+                                        fill="#5243C2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="/img/About us/About Us.jpg" alt="About Us" class="about-us__img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__copyright">
+                    <img src="/img/Logo/footer-2rism-logo.svg" alt="logo" class="footer__logo">
+                    <p class="footer__descr">
+                        We always make our customers happy by providing as many choises as possible
+                    </p>
+                    <ul class="footer__social list-reset">
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 0.0825195C6.63599 0.0825195 0.666656 6.05185 0.666656 13.4159C0.666656 20.0705 5.54266 25.5865 11.9173 26.5879V17.2692H8.53066V13.4159H11.9173V10.4785C11.9173 7.13719 13.9067 5.29185 16.9533 5.29185C18.412 5.29185 19.9373 5.55185 19.9373 5.55185V8.83185H18.2573C16.6 8.83185 16.084 9.85985 16.084 10.9145V13.4159H19.7813L19.1907 17.2692H16.084V26.5879C22.4573 25.5879 27.3333 20.0692 27.3333 13.4159C27.3333 6.05185 21.364 0.0825195 14 0.0825195Z" fill="#5243C2"/>
+                                    </svg>   
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M27.5493 2.95725C26.5314 3.40751 25.4519 3.70322 24.3467 3.83458C25.5117 3.13783 26.3836 2.04127 26.8 0.749251C25.7067 1.39992 24.508 1.85592 23.2587 2.10258C22.4195 1.20469 21.3071 0.609202 20.0946 0.408697C18.8821 0.208193 17.6372 0.413906 16.5537 0.993855C15.4701 1.5738 14.6085 2.4955 14.1028 3.61564C13.5971 4.73579 13.4757 5.99162 13.7573 7.18792C11.5401 7.07679 9.3711 6.50062 7.39104 5.4968C5.41098 4.49299 3.66416 3.08398 2.26399 1.36125C1.76838 2.21252 1.50793 3.18022 1.50933 4.16525C1.50933 6.09858 2.49333 7.80658 3.98933 8.80659C3.10401 8.77871 2.23817 8.53963 1.46399 8.10925V8.17858C1.46426 9.46618 1.90982 10.7141 2.72512 11.7107C3.54043 12.7073 4.6753 13.3912 5.93733 13.6466C5.11548 13.8693 4.25374 13.9021 3.41733 13.7426C3.77315 14.8509 4.46667 15.8202 5.40078 16.5147C6.3349 17.2093 7.46283 17.5943 8.62666 17.6159C7.46997 18.5244 6.14556 19.1959 4.72917 19.5921C3.31277 19.9884 1.83216 20.1016 0.371994 19.9253C2.92092 21.5645 5.88812 22.4347 8.91866 22.4319C19.176 22.4319 24.7853 13.9346 24.7853 6.56525C24.7853 6.32525 24.7787 6.08258 24.768 5.84525C25.8598 5.05614 26.8021 4.07861 27.5507 2.95858L27.5493 2.95725Z" fill="#5243C2"/>
+                                    </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 0.0825195C17.6227 0.0825195 18.0747 0.0958528 19.496 0.162519C20.916 0.229186 21.8827 0.451853 22.7333 0.78252C23.6133 1.12119 24.3547 1.57985 25.096 2.31985C25.774 2.98638 26.2986 3.79264 26.6333 4.68252C26.9627 5.53185 27.1867 6.49985 27.2533 7.91985C27.316 9.34119 27.3333 9.79319 27.3333 13.4159C27.3333 17.0385 27.32 17.4905 27.2533 18.9119C27.1867 20.3319 26.9627 21.2985 26.6333 22.1492C26.2996 23.0396 25.7748 23.846 25.096 24.5119C24.4293 25.1896 23.6231 25.7142 22.7333 26.0492C21.884 26.3785 20.916 26.6025 19.496 26.6692C18.0747 26.7319 17.6227 26.7492 14 26.7492C10.3773 26.7492 9.92534 26.7359 8.504 26.6692C7.084 26.6025 6.11734 26.3785 5.26667 26.0492C4.37644 25.7152 3.57004 25.1904 2.90401 24.5119C2.22588 23.8454 1.70125 23.0391 1.36667 22.1492C1.03601 21.2999 0.813338 20.3319 0.746672 18.9119C0.684005 17.4905 0.666672 17.0385 0.666672 13.4159C0.666672 9.79319 0.680005 9.34119 0.746672 7.91985C0.813338 6.49852 1.03601 5.53319 1.36667 4.68252C1.70032 3.79209 2.22508 2.98561 2.90401 2.31985C3.57023 1.64149 4.37658 1.11683 5.26667 0.78252C6.11734 0.451853 7.08267 0.229186 8.504 0.162519C9.92534 0.0998528 10.3773 0.0825195 14 0.0825195ZM14 6.74919C12.2319 6.74919 10.5362 7.45157 9.28596 8.70181C8.03572 9.95205 7.33334 11.6477 7.33334 13.4159C7.33334 15.184 8.03572 16.8797 9.28596 18.1299C10.5362 19.3801 12.2319 20.0825 14 20.0825C15.7681 20.0825 17.4638 19.3801 18.7141 18.1299C19.9643 16.8797 20.6667 15.184 20.6667 13.4159C20.6667 11.6477 19.9643 9.95205 18.7141 8.70181C17.4638 7.45157 15.7681 6.74919 14 6.74919ZM22.6667 6.41585C22.6667 5.97383 22.4911 5.5499 22.1785 5.23734C21.866 4.92478 21.442 4.74919 21 4.74919C20.558 4.74919 20.1341 4.92478 19.8215 5.23734C19.5089 5.5499 19.3333 5.97383 19.3333 6.41585C19.3333 6.85788 19.5089 7.2818 19.8215 7.59436C20.1341 7.90693 20.558 8.08252 21 8.08252C21.442 8.08252 21.866 7.90693 22.1785 7.59436C22.4911 7.2818 22.6667 6.85788 22.6667 6.41585ZM14 9.41585C15.0609 9.41585 16.0783 9.83728 16.8284 10.5874C17.5786 11.3376 18 12.355 18 13.4159C18 14.4767 17.5786 15.4941 16.8284 16.2443C16.0783 16.9944 15.0609 17.4159 14 17.4159C12.9391 17.4159 11.9217 16.9944 11.1716 16.2443C10.4214 15.4941 10 14.4767 10 13.4159C10 12.355 10.4214 11.3376 11.1716 10.5874C11.9217 9.83728 12.9391 9.41585 14 9.41585Z" fill="#5243C2"/>
+                                    </svg>                                    
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__nav-wrapper">
+                    <div class="footer__nav">
+                        <h3 class="footer__nav-title">
+                            About
+                        </h3>
+                        <ul class="footer__nav-list list-reset">
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    News
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Menu
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav">
+                        <h3 class="footer__nav-title">
+                            Company
+                        </h3>
+                        <ul class="footer__nav-list list-reset">
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Why 2rism
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Partner With Us
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav">
+                        <h3 class="footer__nav-title">
+                            Support
+                        </h3>
+                        <ul class="footer__nav-list list-reset">
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Account
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Support Center
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Feedback
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__subscribe">
+                    <h3 class="footer__subscribe-title">
+                        Subscribe on our destination review newsletters
+                    </h3>
+
+                    <form action="" class="subscribe">
+                        <div class="subscribe__input-wrapper">
+                            <input type="text" id="subscribe__input" class="subscribe__input" required>
+                            <label for="" class="subscribe__label">Your Email</label>
+                        </div>
+    
+                        <div class="subscribe__btn-wrapper">
+                            <button class="button button--subscribe btn-reset">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 9H0V7H8V0L16 8L8 16V9Z" fill="white"/>
+                                    </svg>                                
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/libs/autoComplete/autoComplete.min.js"></script>
+    <script src="/libs/custom-select/custom-select.min.js"></script>
+    <script src="/libs/easepick/easepick.min.js"></script>
+
+    <script src="/js/input-dest.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/mobile-nav.js" defer></script>
+</body>
+
+</html>
