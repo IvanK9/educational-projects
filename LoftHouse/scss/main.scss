@@ -1,0 +1,20 @@
+@import './base/reset';
+@import './base/vars';
+@import './base/mixins';
+@import './base/base';
+
+// Blocks
+
+@import './blocks/header';
+@import './blocks/advantage';
+@import './blocks/appartments';
+@import './blocks/cta';
+@import './blocks/video';
+@import './blocks/map';
+@import './blocks/yandexmap';
+@import './blocks/feedback';
+@import './blocks/footer';
+
+.none {
+    display: none;
+}

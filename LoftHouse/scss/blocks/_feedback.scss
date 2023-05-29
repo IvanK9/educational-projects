@@ -1,0 +1,33 @@
+.feedback {
+    padding-bottom: 180px;
+
+    @include mediaTablet {
+        padding-bottom: 90px;
+    }
+}
+
+.feedback__title {
+    margin-bottom: 38px;
+
+    @include mediaTablet {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.feedback__form  {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+        width: 290px;
+        margin: 0 auto;
+    }
+}
+
+.feedback__form:first-child {
+    gap: 155px;
+}

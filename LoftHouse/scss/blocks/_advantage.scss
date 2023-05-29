@@ -1,0 +1,58 @@
+.advantage {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "II";
+        left: calc(50% + 555px);
+        transform: translate(-50%, 0);
+        line-height: 1.15;
+        @include decorNumber;
+    }
+}
+
+.advantage__content {
+    padding: 120px 0;
+
+    @include mediaTablet {
+        padding: 80px 0;
+    }
+
+}
+
+.advantage__list {
+    display: flex;
+    column-gap: 70px;
+
+    @include mediaTablet {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 70px;
+    }
+}
+
+.advantage__item {
+    text-align: center;
+
+}
+
+.advantage__item-img {
+    margin-bottom: 53px;
+
+    @include mediaTablet {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
+    }
+}
+
+.advantage__item-descr {
+    font-family: $font-secondary;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 300;
+
+    @include mediaTablet {
+        font-size: 16px;
+    }
+}

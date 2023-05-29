@@ -1,0 +1,64 @@
+.footer {
+    padding: 72px 0 51px 0;
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    background-color: $footer-background;
+
+    @include mediaTablet {
+        padding: 36px 0 25px 0;
+    }
+}
+
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @include mediaTablet {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 30px 30px;
+        text-align: center;
+    }
+}
+
+
+
+.footer__logo {
+    margin-top: -12px;
+}
+
+.footer-nav__list,
+.footer-address__list {
+    display: grid;
+    gap: 15px;
+
+    @media screen and (max-width: 639px) {
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $accent;
+    }
+
+}
+
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    @include mediaTablet {
+        align-items: center;
+    }
+}
+
+.footer-address__list {
+    margin-bottom: 20px;
+}
+
+.footer-social__list {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+}
+
+.footer-address__link-email {
+    color: $accent;
+    font-weight: 700;
+}
