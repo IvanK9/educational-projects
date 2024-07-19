@@ -5,4 +5,5 @@
     [Evclid](https://ivank9.github.io/educational-projects/Educational%20project%20Evclid/)    
     [Lagoona](https://ivank9.github.io/educational-projects/Educational%20project%20Lagoona/)    
     [LoftHouse](https://ivank9.github.io/educational-projects/LoftHouse/)    
-    [Roll Shop](https://ivank9.github.io/educational-projects/RollShop/)
+    [Roll Shop](https://ivank9.github.io/educational-projects/RollShop/)    
+    [MovieBox](https://ivank9.github.io/educational-projects/MovieBox/)
