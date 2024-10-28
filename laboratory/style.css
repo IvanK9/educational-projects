@@ -101,6 +101,7 @@ body {
 
 .hero {
     position: relative;
+    margin-bottom: 80px;
     background: url('./assets/image/Hero-bg.png') rgba(42, 108, 234, 0.8);
     background-position: center center;
     background-size: cover;
@@ -141,6 +142,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     cursor: pointer;
+    color: #191C1F;
     background-color: #ECEFF2;
     border: none;
     border-radius: 4px;
@@ -149,4 +151,147 @@ body {
 
 .hero__btn:hover {
     background-color: #FFF;
+}
+
+/* how-work */
+
+.how-work {
+    margin-bottom: 80px;
+}
+
+.title-2 {
+    margin: 0;
+    margin-bottom: 61px;
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 600;
+    color: #191C1F;
+    text-align: center;
+}
+
+.how__work__list {
+    display: flex;
+    column-gap: 32px;
+}
+
+.how-work__item {
+    padding-top: 90px;
+    max-width: 280px;
+}
+
+.how-work__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #191C1F;
+}
+
+.how-work__descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #5E646A;
+}
+
+.how-work__item--bg-1 {
+    background-image: url('./assets/image/how-1-waiting.png');
+    background-size: 72px 72px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.how-work__item--bg-2 {
+    background-image: url('./assets/image/how-2-delivery-truck.png');
+    background-size: 72px 72px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.how-work__item--bg-3 {
+    background-image: url('./assets/image/how-3-secure.png');
+    background-size: 72px 72px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.how-work__item--bg-4 {
+    background-image: url('./assets/image/how-4-money-bags.png');
+    background-size: 72px 72px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+/* third-block */
+
+.third-block {
+    margin-bottom: 80px;
+}
+
+.third-block__wrapper {
+    display: flex;
+    column-gap: 32px;
+    align-items: center;
+}
+
+.third-block__left {
+    max-width: 592px;
+}
+
+.third-block__title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 32px;
+    line-height: 40px;
+    color: #191C1F;
+}
+
+.third-block__descr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 28px;
+    color: #5E646A;
+}
+
+.third-block__right {
+    position: relative;
+}
+
+.third-block__img {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/image/third-block-2_1.png');
+    background-size: cover;
+}
+
+/* reviews */
+
+.reviews__wrapper {
+    position: relative;
+}
+
+.reviews .title-2 {
+    margin-bottom: 32px;
+}
+
+.reviews__bullets {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: flex;
+    gap: 12px;
+}
+
+.reviews__bullet {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #C2C8CD;
+    cursor: pointer;
 }
