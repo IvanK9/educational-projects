@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css">
+    <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -276,8 +278,8 @@
                         Вопросы и ответы
                     </h2>
                     <ul class="question__accordion accordion list-reset">
-                        <li class="accordion__item">
-                            <div class="accordion__header">
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
                                 <h4 class="accordeon__header-title">
                                     Подтверждено: сознание наших соотечественников не замутнено пропагандой?
                                 </h4>
@@ -285,22 +287,25 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z"
-                                            fill="#191C1F" />
-                                        <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2" />
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
                                     </svg>
                                 </button>
                             </div>
-                            <div class="accordion__body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, voluptatum autem
-                                sequi suscipit exercitationem nemo ex, nostrum reiciendis fugit sapiente voluptatibus
-                                mollitia odit officiis id dolore adipisci cupiditate? Corrupti at sapiente fuga velit,
-                                quae quas, nobis reprehenderit vel porro pariatur magnam culpa doloribus distinctio
-                                adipisci magni laboriosam quo, incidunt suscipit?
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, voluptatum autem
+                                    sequi suscipit exercitationem nemo ex, nostrum reiciendis fugit sapiente
+                                    voluptatibus
+                                    mollitia odit officiis id dolore adipisci cupiditate? Corrupti at sapiente fuga
+                                    velit,
+                                    quae quas, nobis reprehenderit vel porro pariatur magnam culpa doloribus distinctio
+                                    adipisci magni laboriosam quo, incidunt suscipit?
+                                </p>
                             </div>
                         </li>
-                        <li class="accordion__item">
-                            <div class="accordion__header">
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
                                 <h4 class="accordeon__header-title">
                                     Прототип нового сервиса - это как трубный призыв?
                                 </h4>
@@ -308,21 +313,24 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z"
-                                            fill="#191C1F" />
-                                        <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2" />
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
                                     </svg>
                                 </button>
                             </div>
-                            <div class="accordion__body">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem dicta non consequuntur
-                                distinctio illum error suscipit, consectetur qui repudiandae, deserunt obcaecati
-                                cupiditate. Consequatur perspiciatis sit debitis eius esse, ea libero cupiditate itaque,
-                                ad pariatur amet eum porro eaque id voluptates!
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem dicta non
+                                    consequuntur
+                                    distinctio illum error suscipit, consectetur qui repudiandae, deserunt obcaecati
+                                    cupiditate. Consequatur perspiciatis sit debitis eius esse, ea libero cupiditate
+                                    itaque,
+                                    ad pariatur amet eum porro eaque id voluptates!
+                                </p>
                             </div>
                         </li>
-                        <li class="accordion__item">
-                            <div class="accordion__header">
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
                                 <h4 class="accordeon__header-title">
                                     Частокол на границе продолжает удивлять?
                                 </h4>
@@ -330,17 +338,112 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z"
-                                            fill="#191C1F" />
-                                        <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2" />
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
                                     </svg>
                                 </button>
                             </div>
-                            <div class="accordion__body">
-                                В частности, дальнейшее развитие различных форм деятельности позволяет выполнить важные
-                                задания по разработке дальнейших направлений развития. Предварительные выводы
-                                неутешительны: экономическая повестка сегодняшнего дня говорит о возможностях
-                                существующих финансовых и административных условий.
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    В частности, дальнейшее развитие различных форм деятельности позволяет выполнить
+                                    важные
+                                    задания по разработке дальнейших направлений развития. Предварительные выводы
+                                    неутешительны: экономическая повестка сегодняшнего дня говорит о возможностях
+                                    существующих финансовых и административных условий.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
+                                <h4 class="accordeon__header-title">
+                                    Очевидцы сообщают, что слышали грохот грома градущих изменений?
+                                </h4>
+                                <button class="accordion__header-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corrupti ipsum,
+                                    repellendus autem porro labore temporibus iure velit modi commodi at, nam eum minus
+                                    quisquam suscipit! Eum quam eveniet voluptates accusamus officiis ad unde maxime
+                                    labore corrupti? Ad, rem ullam!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
+                                <h4 class="accordeon__header-title">
+                                    И по сей день в центральных регионах звучит перекатами печальный плач оппозиции?
+                                </h4>
+                                <button class="accordion__header-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, provident labore fuga
+                                    nostrum architecto quam laboriosam in totam doloribus rerum esse, molestiae at,
+                                    incidunt numquam corporis accusantium dolorem ex iusto repudiandae qui soluta quos.
+                                    Vitae, quam aliquam.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
+                                <h4 class="accordeon__header-title">
+                                    Нынче никто не может себе позволить инициировать треск разлетающихся скреп?
+                                </h4>
+                                <button class="accordion__header-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut sit quod
+                                    aliquid doloribus nihil eum totam sapiente repellat! Vel tempora incidunt
+                                    consequuntur voluptatem sit.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion__item ac">
+                            <div class="accordion__header ac-header">
+                                <h4 class="accordeon__header-title">
+                                    Высококачественный прототип будущего проекта обнадёживает?
+                                </h4>
+                                <button class="accordion__header-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" />
+                                        <circle cx="12" cy="12" r="11" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__body ac-panel">
+                                <p class="accordion__body-descr">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur tempora
+                                    libero consequatur blanditiis quas aspernatur ad beatae doloremque accusamus totam,
+                                    hic pariatur dolorum dolorem eos delectus provident quibusdam dolor, temporibus
+                                    soluta aliquam quo sequi in! Doloremque velit eius delectus, ad esse molestiae vero
+                                    eveniet expedita ipsa aut recusandae eligendi tempore. Numquam natus hic expedita,
+                                    asperiores ducimus placeat assumenda quod consequatur.
+                                </p>
                             </div>
                         </li>
                     </ul>

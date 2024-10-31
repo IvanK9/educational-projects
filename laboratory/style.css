@@ -442,8 +442,10 @@ body {
 
 /* question */
 
-.accordion__item:not(.accordion__item--show) .accordion__body{
-    display: none;
+.accordion__item {
+    margin: 0;
+    background-color: transparent;
+    border: none;
 }
 
 .accordion__header {
@@ -455,8 +457,54 @@ body {
     border-top: 1px solid #C2C8CD;
 }
 
+.accordeon__header-title {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #191C1F;
+    transition: color 0.3s ease-in-out;
+}
+
 .accordion__header-btn {
+    width: 24px;
+    height: 24px;
     padding: 0;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.accordion__header-btn svg path {
+    fill: #191C1F;
+    transition: fill 0.3s ease-in-out
+}
+
+.accordion__header-btn svg circle {
+    stroke: #191C1F;
+    transition: stroke 0.3s ease-in-out
+}
+
+.accordion__body-descr {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #5E646A;
+}
+
+.accordion__header:hover .accordeon__header-title {
+    color: #2A6CEA;
+}
+
+.accordion__header:hover .accordion__header-btn svg path {
+    fill: #2A6CEA;
+}
+
+.accordion__header:hover .accordion__header-btn svg circle {
+    stroke: #2A6CEA;
+}
+
+.accordion__item.is-active .accordion__header-btn {
+    transform: rotate(-45deg);
 }
