@@ -52,5 +52,31 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 })
 
+// Mask phone
 
+const element = document.getElementById('phone');
+const maskOptions = {
+  mask: '+{7}(000)000-00-00',
+  min: 13,
+};
+const mask = IMask(element, maskOptions);
+
+
+// Burger
+
+let burger = document.querySelector(".burger");
+let nav = document.querySelector(".header__nav");
+
+burger.addEventListener("click", function () {
+  burger.classList.toggle("burger--open");
+  nav.classList.toggle("header__nav--open");
+});
+
+nav.addEventListener("click", function (event) {
+  let target = event.target;
+  if (target.classList.contains("header__link")) {
+    burger.classList.remove("burger--open");
+    nav.classList.remove("header__nav--open");
+  }
+});
 

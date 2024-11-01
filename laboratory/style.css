@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -15,14 +16,6 @@ a {
 
 img {
     max-width: 100%;
-    vertical-align: bottom;
-}
-
-.btn-reset {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 @font-face {
@@ -96,6 +89,72 @@ body {
     column-gap: 24px;
 }
 
+.burger {
+    display: none;
+    position: relative;
+    padding: 0;
+    width: 30px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.burger__line {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #FFF;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.burger__line--first {
+    top: 0;
+}
+
+.burger__line--second {
+    bottom: 0;
+}
+
+.header__logo--burger {
+    display: none;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    padding: 0;
+    width: 30px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.burger__line {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #FFF;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.burger__line--first {
+    top: 0;
+}
+
+.burger__line--second {
+    bottom: 0;
+}
+
+.header__logo--burger {
+    display: none;
+}
+
 /* hero */
 
 .hero {
@@ -122,7 +181,7 @@ body {
     margin-bottom: 18px;
     font-size: 52px;
     line-height: 64px;
-    font-weight: 600px;
+    font-weight: 600;
     color: #FFF;
     text-align: center;
 }
@@ -176,6 +235,7 @@ body {
 .how-work__item {
     padding-top: 90px;
     max-width: 280px;
+    background-size: 52px 52px;
 }
 
 .how-work__title {
@@ -234,7 +294,7 @@ body {
     align-items: center;
 }
 
-.third-block__left {
+.third-block__content  {
     max-width: 592px;
 }
 
@@ -253,7 +313,7 @@ body {
     color: #5E646A;
 }
 
-.third-block__right {
+.third-block__image {
     position: relative;
 }
 
@@ -315,6 +375,13 @@ body {
     flex-shrink: 0;
     scroll-snap-align: start;
     cursor: pointer;
+}
+
+.slider__item-descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #191C1F;
 }
 
 .reviews__btn {
@@ -521,5 +588,124 @@ body {
     margin: 0;
     font-size: 16px;
     line-height: 28px;
+    color: #191C1F;
+}
+
+/* SUBMIT */
+
+.submit {
+    padding: 80px 0;
+    border-bottom: 1px solid #ECEFF2;
+}
+
+.submit__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit__wrapper .sub__title {
+    margin-bottom: 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.form__personal-data {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+    width: 800px;
+    width: 100%;
+}
+
+.form__input {
+    padding: 16px;
+    font-size: 18px;
+    max-width: 384px;
+    border-radius: 4px;
+    border: 2px solid #F6F8FA;
+    background-color: #F6F8FA;
+    flex-basis: 384px;
+}
+
+.form__input:focus {
+    border-color: transparent;
+    outline: none;
+}
+
+.form__send {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form__checkbox {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#agreement {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    outline: #2A6CEA;
+}
+
+.form__checkbox-agreement {
+    font-size: 16px;
+    line-height: 28px;
+    color: #191C1F;
+    cursor: pointer;
+}
+
+.form__btn {
+    padding: 20px 17%;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #2A6CEA;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form__btn:hover {
+    background-color: #397DFF;
+}
+
+#name:invalid:not(:placeholder-shown) {
+    border-color: #F13636;
+}
+
+#phone:invalid:not(:placeholder-shown) {
+    border-color: #F13636;
+}
+
+#name:valid:not(:placeholder-shown) {
+    border-color: rgb(21, 160, 21);
+}
+
+#phone:valid:not(:placeholder-shown) {
+    border-color: rgb(21, 160, 21);
+}
+
+/* FOOTER */
+
+.footer__coopyright {
+    display: block;
+    padding: 28px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
     color: #191C1F;
 }

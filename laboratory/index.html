@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css">
     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
 </head>
 
 <body>
@@ -19,29 +21,36 @@
                     <img src="./assets/image/testLab-logo.png" alt="TestLab Logo" class="header__logo">
                 </a>
                 <nav class="header__nav">
+                    <a href="#" class="header__logo--burger">
+                        <img src="./assets/image/testLab-logo-burger.png" alt="TestLab Logo" class="header__logo">
+                    </a>
                     <ul class="header__list list-reset">
                         <li class="header__item">
-                            <a href="#" class="header__link">
+                            <a href="#how-work" class="header__link">
                                 Как это работает
                             </a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">
+                            <a href="#third-block" class="header__link">
                                 3-й блок
                             </a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">
+                            <a href="#question" class="header__link">
                                 Вопросы и ответы
                             </a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">
+                            <a href="#submit" class="header__link">
                                 Форма
                             </a>
                         </li>
                     </ul>
                 </nav>
+                <button class="header__burger burger">
+                    <span class="burger__line burger__line--first"></span>
+                    <span class="burger__line burger__line--second"></span>
+                </button>
             </div>
         </div>
     </header>
@@ -61,7 +70,7 @@
                 </div>
             </div>
         </section>
-        <section class="how-work">
+        <section class="how-work" id="how-work">
             <div class="container">
                 <div class="how-work__wrapper">
                     <h2 class="sub__title">
@@ -104,10 +113,10 @@
                 </div>
             </div>
         </section>
-        <section class="third-block">
+        <section class="third-block" id="third-block">
             <div class="container">
                 <div class="third-block__wrapper">
-                    <div class="third-block__left">
+                    <div class="third-block__content">
                         <h2 class="third-block__title">
                             Круто, ты дошел до третьего блока
                         </h2>
@@ -120,7 +129,7 @@
                             процентах и штрафах.
                         </p>
                     </div>
-                    <div class="third-block__right">
+                    <div class="third-block__image">
                         <img src="./assets/image/third-block-2_2.png" alt="" class="third-block__img--bg">
                         <img src="./assets/image/third-block-2_1.png" alt="" class="third-block__img">
                     </div>
@@ -271,7 +280,7 @@
                 </div>
             </div>
         </section>
-        <section class="question">
+        <section class="question" id="question">
             <div class="container">
                 <div class="question__wrapper">
                     <h2 class="sub__title">
@@ -506,7 +515,36 @@
                 </div>
             </div>
         </section>
+        <section class="submit">
+            <div class="container">
+                <div class="submit__wrapper">
+                    <h2 class="sub__title">
+                        Отправь форму
+                    </h2>
+                    <form action="https://jsonplaceholder.typicode.com/posts" class="submit__form form" method="post">
+                        <div class="form__personal-data">
+                            <input type="text" name="name" id="name" class="form__input" placeholder="Имя">
+                            <input type="tel" name="phone" id="phone" class="form__input" placeholder="Телефон">
+                        </div>
+                        <div class="form__send">
+                            <div class="form__checkbox">
+                                <input type="checkbox" name="agreement" id="agreement" required>
+                                <label for="agreement" class="form__checkbox-agreement">Согласен, не согласен</label>
+                            </div>
+                            <button type="submit" class="form__btn">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <span class="footer__coopyright">
+            © 2021 Лаборатория интернет
+        </span>
+    </footer>
     <script src="./main.js"></script>
 </body>
 
