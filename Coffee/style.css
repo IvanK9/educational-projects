@@ -267,6 +267,8 @@ body {
     height: 640px;
     overflow: hidden;
     margin: 0 auto;
+    user-select: none;
+    touch-action: pan-y;
 }
 
 .favorite__slider-line {
@@ -277,19 +279,22 @@ body {
     overflow: hidden;
 }
 
+.favorite__slider-line .grab {
+    cursor: grab;
+}
+
+.favorite__slider-line .grabbing {
+    cursor: grabbing;
+}
+
 .favorite__item {
     width: 480px;
     text-align: center;
 }
 
-/* .favorite__item--active {
-    opacity: 1;
-    scroll-behavior: smooth;
-    transition: transform 5s linear;
-} */
-
 .favorite__item-img {
     margin-bottom: 15px;
+    pointer-events: none;
 }
 
 .favorite__item-title {
@@ -351,6 +356,11 @@ body {
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.favorite__bullet--pause::after {
+    animation-play-state: paused;
 }
 
 @keyframes color-change {
@@ -443,6 +453,7 @@ body {
     border-radius: 20px;
     transition: transform .3s ease-in-out;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .about__img {
