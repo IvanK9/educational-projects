@@ -23,15 +23,8 @@
     }
 
     .header__wrapper {
-        /* position: relative; */
-        /* overflow: hidden; */
         transition: all .5s ease-in-out;
     }
-
-    /* .header--open {
-        overflow: visible;
-        transition: all .5s ease-in-out;
-    } */
 
 
     .header__link-wrapper {
@@ -39,27 +32,23 @@
     }
 
     .header__nav {
-        /* display: none; */
         position: fixed;
         max-width: calc(100%);
         top: 80px;
         right: -100%;
-        /* transform: translateX(100%); */
         background-color: #E1D4C9;
         width: 100%;
         height: 100vh;
         padding: 60px 40px;
         z-index: 3;
-        transition: overflow .5s ease-in-out,
-            right .5s ease-in-out;
+        transition: overflow .3s ease-in-out,
+        transform .3s ease-in-out;
     }
 
     .header__nav--open {
-        /* transform: translateX(-1px); */
-        right: 0;
-        /* overflow: visible; */
-        transition: overflow .5s ease-in-out,
-            right .5s ease-in-out;
+        transform: translateX(-100%);
+        transition: overflow .3s ease-in-out,
+            transform .3s ease-in-out;
     }
 
     .header__list {
@@ -125,19 +114,19 @@
         transition: transform .3s ease-in-out;
     }
 
-    coffee-house-week3 .burger__line--firstActive {
+    .burger__line--firstActive {
         top: 18px;
         transform: rotate(45deg);
         transition: transform .3s ease-in-out;
     }
 
-    coffee-house-week3 .burger__line--secondActive {
+    .burger__line--secondActive {
         bottom: 22px;
         transform: rotate(-45deg);
         transition: transform .3s ease-in-out;
     }
 
-    coffee-house-week3 .hero__content {
+    .hero__content {
         width: 530px;
     }
 
@@ -256,14 +245,7 @@
 
     .favorite__item {
         width: 348px;
-        /* width: 348px; */
-        /* text-align: center; */
     }
-
-    /* .favorite__item {
-        width: 100%;
-    } */
-
 
     .favorite__item-img {
         width: 348px;

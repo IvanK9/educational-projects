@@ -6,12 +6,14 @@ const btnBurgerSecond = document.querySelector(".burger__line--second");
 const headerNav = document.querySelector(".header__nav");
 const headerItem = document.querySelectorAll(".header__item");
 const headerOpen = document.querySelector(".header__wrapper");
+const body = document.getElementsByTagName('body')[0];
 
 btnBurger.addEventListener("click", function () {
   btnBurgerFirst.classList.toggle("burger__line--firstActive");
   btnBurgerSecond.classList.toggle("burger__line--secondActive");
   headerNav.classList.toggle("header__nav--open");
   headerOpen.classList.toggle("header--open");
+  body.classList.toggle('noscroll');
 });
 
 headerItem.forEach((link) =>
@@ -20,6 +22,7 @@ headerItem.forEach((link) =>
     btnBurgerSecond.classList.remove("burger__line--secondActive");
     headerNav.classList.remove("header__nav--open");
     headerOpen.classList.remove("header--open");
+    body.classList.remove('noscroll');
   })
 );
 
