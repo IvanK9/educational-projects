@@ -35,6 +35,7 @@ const btnShowMore = document.querySelector(".menu__btn-showMore");
 let allProducts;
 
 let activeCategory = "coffee";
+let isMore = true;
 
 menuTabs.forEach((el) => {
   el.addEventListener("click", function () {
@@ -56,7 +57,7 @@ menuTabs.forEach((el) => {
     }
   });
 });
-
+// console.log(allProducts);
 function renderMenu(activeMenu, activeCategory) {
   const productType = activeMenu.filter((el) => el.category == activeCategory);
 
@@ -85,6 +86,11 @@ function renderMenu(activeMenu, activeCategory) {
               </li>
               `
     );
+    if (document.documentElement.clientWidth <= 768 && index > 4) {
+      btnShowMore.classList.add('menu__btn-showMore--active');
+    } else {
+      btnShowMore.classList.remove('menu__btn-showMore--active');
+    }
   });
 }
 
@@ -94,6 +100,17 @@ fetch("../products.json")
     renderMenu(activeMenu, "coffee");
     allProducts = activeMenu;
   });
+
+// Show More
+
+btnShowMore.addEventListener('click', () => {
+  const cardList = document.querySelectorAll('.menu__cards-item');
+  btnShowMore.classList.remove('menu__btn-showMore--active');
+  console.log(cardList);
+  cardList.forEach((el) => {
+    el.classList.add('menu__cards-item--active');
+  })
+})
 
 // Modal
 
@@ -224,7 +241,8 @@ function checkAdditives(array) {
       }
       cardFullPrice =
         +Number(price).toFixed(2) +
-        +Number(addValueAdditives).toFixed(2) + +Number(addValueSize).toFixed(2);
+        +Number(addValueAdditives).toFixed(2) +
+        +Number(addValueSize).toFixed(2);
       renderPrice();
     });
   });
