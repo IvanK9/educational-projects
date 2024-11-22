@@ -1,0 +1,293 @@
+@media (max-width: 1300px) {
+    .mobile__wrapper {
+        padding-bottom: 650px;
+        background-position: center bottom;
+        background-size: 630px 630px;
+    }
+
+    .mobile__content {
+        max-width: 100%;
+    }
+
+    .footer__wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        position: relative;
+    }
+
+    .header__wrapper {
+        transition: all .5s ease-in-out;
+    }
+
+
+    .header__link-wrapper {
+        display: none;
+    }
+
+    .header__nav {
+        position: fixed;
+        max-width: calc(100%);
+        top: 80px;
+        right: -100%;
+        background-color: #E1D4C9;
+        width: 100%;
+        height: 100vh;
+        padding: 60px 40px;
+        z-index: 3;
+        transition: overflow .3s ease-in-out,
+        transform .3s ease-in-out;
+    }
+
+    .header__nav--open {
+        transform: translateX(-100%);
+        transition: overflow .3s ease-in-out,
+            transform .3s ease-in-out;
+    }
+
+    .header__list {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .header__item {
+        padding-bottom: 0;
+        font-size: 32px;
+        line-height: 125%;
+    }
+
+    .header__item--burgerMenu {
+        display: block;
+        margin-top: 60px;
+    }
+
+    .header__item--burgerMenu .header__link-menu {
+        font-size: 32px;
+        line-height: 125%;
+    }
+
+    .header__item--burgerMenu .header__link-menu svg {
+        width: 40px;
+        height: 40px;
+        transform: translateY(5px);
+
+    }
+
+    .burger {
+        position: relative;
+        display: block;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #665F55;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .burger__line {
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: #000;
+        transition: transform .3s ease-in-out;
+    }
+
+    .burger__line--first {
+        top: 14px;
+        left: 12px;
+        transition: transform .3s ease-in-out;
+    }
+
+    .burger__line--second {
+        bottom: 18px;
+        right: 12px;
+        transition: transform .3s ease-in-out;
+    }
+
+    .burger__line--firstActive {
+        top: 18px;
+        transform: rotate(45deg);
+        transition: transform .3s ease-in-out;
+    }
+
+    .burger__line--secondActive {
+        bottom: 22px;
+        transform: rotate(-45deg);
+        transition: transform .3s ease-in-out;
+    }
+
+    .hero__content {
+        width: 530px;
+    }
+
+    .hero__wrapper {
+        padding: 100px 60px;
+    }
+
+    .hero__link-menu {
+        position: absolute;
+        top: 23px;
+        right: 63px;
+        opacity: 1;
+    }
+
+    .hero__link-descr {
+        transform: translateX(-13px);
+    }
+
+    .hero__link:hover>.hero__link-menu {
+        opacity: 1;
+    }
+
+    .hero__link:hover>.hero__link-descr {
+        transform: translateX(-13px);
+    }
+
+    .favorite__bullets {
+        left: 40%;
+    }
+
+    .about__title {
+        margin-bottom: 41px;
+    }
+
+    .about__list {
+        max-height: 100%;
+    }
+
+    .about__item {
+        width: 100%;
+    }
+
+    .about__img {
+        width: 100%;
+        transform: scale(1.05);
+    }
+
+    .about__item--2,
+    .about__item--3 {
+        display: none;
+    }
+
+    .mobile__wrapper {
+        padding-top: 0;
+        padding-bottom: 730px;
+    }
+
+    .footer__wrapper {
+        padding: 100px 60px;
+        padding-bottom: 97px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .hero__content {
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 42px;
+        line-height: 115%;
+    }
+
+    .mobile__wrapper {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 580px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    coffee-house-week3 .header__nav {
+        padding: 60px 0;
+        max-width: 548px;
+    }
+
+    .hero__wrapper {
+        padding: 60px 16px;
+    }
+
+    .hero__descr {
+        margin-bottom: 38px;
+    }
+
+    .title-2 {
+        font-size: 32px;
+    }
+
+     .favorite__slider {
+        width: 348px;
+        height: 532px;
+        /* overflow: hidden;
+        margin: 0 auto; */
+    }
+
+    .favorite__slider-line {
+        width: 1440px;
+        height: 532px;
+        display: flex;
+        transition: transform .5s ease-in-out;
+        overflow: hidden;
+    }
+
+    .favorite__item {
+        width: 348px;
+    }
+
+    .favorite__item-img {
+        width: 348px;
+        height: 348px;
+        margin-bottom: 17px;
+    }
+
+    .favorite__btn {
+        display: none;
+    }
+
+    .favorite__bullets {
+        left: 29%;
+    }
+
+    .about__img {
+        transform: scale(1.25);
+    }
+
+    .about__img:hover {
+        transform: scale(1.15);
+    }
+
+    .about__title {
+        margin-bottom: 39px;
+    }
+
+    .mobile__buttons {
+        flex-direction: column;
+    }
+
+    .mobile__wrapper {
+        padding-bottom: 388px;
+    }
+
+    .footer__wrapper {
+        padding: 60px 16px;
+        padding-bottom: 57px;
+        gap: 40px;
+    }
+
+    .footer__title {
+        font-size: 32px;
+    }
+}
