@@ -1,6 +1,6 @@
 # educational-projects
 В этом репозитории собраны мои учебные проекты    
-    [Resource](https://ivank9.github.io/educational-projects/Coffee/) - практика верстки 2 страничного с применением ванильного JS     
+    [Resource](https://ivank9.github.io/educational-projects/Coffee/) - практика верстки 2 страничного сайта с применением ванильного JS     
     [Тестовое задание](https://ivank9.github.io/educational-projects/laboratory/) - недавно выполнял тестовое задание      
     [Аудио плеер](https://rolling-scopes-school.github.io/ivank9-JSFEPRESCHOOL2024Q2/js30-audio-player/) - тренировался с созданием аудиплеера, взаимодействия с прогрессбаром с помощью js     
     [Игра змейка](https://rolling-scopes-school.github.io/ivank9-JSFEPRESCHOOL2024Q2/random-game/) - практика создания логики игры змейка + ознакомление с canvas     
