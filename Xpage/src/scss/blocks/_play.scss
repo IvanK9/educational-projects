@@ -1,0 +1,255 @@
+@use "../base/vars";
+
+.play {
+  margin-bottom: 120px;
+
+  @include vars.mobile {
+    margin-bottom: 42px;
+  }
+}
+
+.play__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 64px;
+
+  @include vars.mobile {
+    margin-bottom: 17px;
+    align-items: flex-end;
+  }
+}
+
+.play__link {
+  display: flex;
+  transition: opacity 0.3s ease-in-out;
+  margin-bottom: 8px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include vars.mobile {
+    margin-bottom: 0;
+
+    .play__link-img {
+      display: none;
+    }
+  }
+}
+
+.play__title {
+  margin: 0;
+  font-size: 80px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: vars.$color-black;
+
+  @include vars.mobile {
+    font-size: 26px;
+  }
+}
+
+.play__link-txt {
+  margin-right: 12px;
+  font-size: 20px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: vars.$color-orange;
+
+  @include vars.mobile {
+    font-size: 14px;
+    margin-right: 0;
+  }
+}
+
+.play__list {
+  display: flex;
+  // column-gap: 8px;
+  justify-content: space-between;
+  width: 100%;
+
+  @include vars.laptop-small {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+  }
+
+  @include vars.mobile {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.play__item {
+  position: relative;
+  width: calc(100% / 3 - 10px);
+  background-color: vars.$color-white;
+  border-radius: 20px;
+  object-fit: cover;
+  max-height: 784px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+    object-position: center top;
+    max-height: 520px;
+    margin-bottom: 62px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .play__item-ball {
+    aspect-ratio: 621 / 520;
+    object-position: right top;
+  }
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: vars.$color-black;
+
+    img {
+      margin-top: -95px;
+
+      @include vars.mobile {
+        margin-top: -70px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .play__item-title {
+      color: vars.$color-white;
+    }
+
+    .play__item-descr {
+      margin-bottom: 32px;
+      color: vars.$color-white;
+
+      @include vars.laptop {
+        margin-bottom: 18px;
+      }
+
+      @include vars.mobile {
+        margin-bottom: 10px;
+      }
+    }
+
+    .play__btn {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include vars.laptop {
+    aspect-ratio: auto 5 / 7;
+
+    img {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include vars.laptop-small {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  @include vars.mobile {
+    border-radius: 10px;
+    height: 446px;
+    object-fit: contain;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 246px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.play__item-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.play__item-box {
+  padding: 0 24px 24px 24px;
+  overflow: hidden;
+
+  @include vars.mobile {
+    padding: 0 12px 12px 12px;
+  }
+}
+
+.play__item-title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: vars.$color-black;
+  max-width: 550px;
+
+  @include vars.laptop {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  @include vars.mobile {
+    margin-bottom: 8px;
+    font-size: 20px;
+    max-width: 272px;
+  }
+}
+
+.play__item-descr {
+  margin: 0;
+  font-family: vars.$font-CommissionerRegular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: vars.$color-black;
+  max-width: 440px;
+
+  @include vars.mobile {
+    font-size: 14px;
+    max-width: 272px;
+  }
+}
+
+.play__btn {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: vars.$color-orange;
+  transition: all 0.3s ease-in-out;
+
+  @include vars.mobile {
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+
+  .play__btn-txt {
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: vars.$color-white;
+
+    @include vars.mobile {
+      font-size: 14px;
+    }
+  }
+}

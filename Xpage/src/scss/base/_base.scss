@@ -1,0 +1,28 @@
+@use "./vars";
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  background-color: vars.$bg-main;
+  font-family: vars.$font-Druk;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include vars.mobile {
+    padding: 0 12px;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
