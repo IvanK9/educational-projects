@@ -25,6 +25,10 @@
   align-items: end;
   margin-bottom: 64px;
 
+  @include vars.tablet {
+    margin-bottom: 32px;
+  }
+
   @include vars.mobile {
     margin-bottom: 17px;
     align-items: flex-end;
@@ -37,6 +41,10 @@
   line-height: 120%;
   text-transform: uppercase;
   color: vars.$color-black;
+
+  @include vars.tablet {
+    font-size: 40px;
+  }
 
   @include vars.mobile {
     font-size: 26px;
