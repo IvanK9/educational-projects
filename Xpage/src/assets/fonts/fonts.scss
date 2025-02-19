@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Commissioner-Regular";
+  src: local("Commissioner-Regular"),
+    url("./Commissioner/Commissioner-Regular.woff2") format("woff2"),
+    url("./Commissioner/Commissioner-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Commissioner-Bold";
+  src: local("Commissioner-Bold"),
+    url("./Commissioner/Commissioner-Bold.woff2") format("woff2"),
+    url("./Commissioner/Commissioner-Bold.woff2") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+  font-family: "Druk";
+  src: local("Druk"),
+    url("./Druk/DrukWideCyr-Bold.woff2") format("woff2"),
+    url("./Druk/DrukWideCyr-Bold.woff") format("woff");
+    font-weight: 700;
+}
