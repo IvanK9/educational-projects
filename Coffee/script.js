@@ -6,14 +6,14 @@ const btnBurgerSecond = document.querySelector(".burger__line--second");
 const headerNav = document.querySelector(".header__nav");
 const headerItem = document.querySelectorAll(".header__item");
 const headerOpen = document.querySelector(".header__wrapper");
-const body = document.getElementsByTagName('body')[0];
+const body = document.getElementsByTagName("body")[0];
 
 btnBurger.addEventListener("click", function () {
   btnBurgerFirst.classList.toggle("burger__line--firstActive");
   btnBurgerSecond.classList.toggle("burger__line--secondActive");
   headerNav.classList.toggle("header__nav--open");
   headerOpen.classList.toggle("header--open");
-  body.classList.toggle('noscroll');
+  body.classList.toggle("noscroll");
 });
 
 headerItem.forEach((link) =>
@@ -22,8 +22,8 @@ headerItem.forEach((link) =>
     btnBurgerSecond.classList.remove("burger__line--secondActive");
     headerNav.classList.remove("header__nav--open");
     headerOpen.classList.remove("header--open");
-    body.classList.remove('noscroll');
-  })
+    body.classList.remove("noscroll");
+  }),
 );
 
 // Slider
@@ -161,9 +161,8 @@ let posFinal = 0;
 let posThreshold = sliderWidth * 0.25;
 let regExp = /[-0-9.]+(?=px)/;
 
-
-let getEvent = function() {
-  return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+let getEvent = function () {
+  return event.type.search("touch") !== -1 ? event.touches[0] : event;
 };
 
 function swipeStart() {
@@ -171,17 +170,16 @@ function swipeStart() {
 
   posInit = posX1 = evt.clientX;
 
-  sliderLine.style.transition = '';
+  sliderLine.style.transition = "";
 
-  document.addEventListener('touchmove', swipeAction);
-  document.addEventListener('touchend', swipeEnd);
-  document.addEventListener('mousemove', swipeAction);
-  document.addEventListener('mouseup', swipeEnd);
+  document.addEventListener("touchmove", swipeAction);
+  document.addEventListener("touchend", swipeEnd);
+  document.addEventListener("mousemove", swipeAction);
+  document.addEventListener("mouseup", swipeEnd);
 
-  sliderLine.classList.remove('grab');
-  sliderLine.classList.add('grabbing');
+  sliderLine.classList.remove("grab");
+  sliderLine.classList.add("grabbing");
 }
-
 
 function swipeAction() {
   let evt = getEvent();
@@ -194,13 +192,13 @@ function swipeAction() {
   sliderLine.style.transform = `translateX(${transform - posX2}px)`;
 }
 
-function swipeEnd () {
+function swipeEnd() {
   posFinal = posInit - posX1;
 
-  document.removeEventListener('touchmove', swipeAction);
-  document.removeEventListener('mousemove', swipeAction);
-  document.removeEventListener('touchend', swipeEnd);
-  document.removeEventListener('mouseup', swipeEnd);
+  document.removeEventListener("touchmove", swipeAction);
+  document.removeEventListener("mousemove", swipeAction);
+  document.removeEventListener("touchend", swipeEnd);
+  document.removeEventListener("mouseup", swipeEnd);
 
   if (Math.abs(posFinal) > posThreshold) {
     if (posInit < posX1) {
@@ -222,9 +220,34 @@ function swipeEnd () {
     }
   }
 
-  sliderLine.classList.add('grab');
-  sliderLine.classList.remove('grabbing');
+  sliderLine.classList.add("grab");
+  sliderLine.classList.remove("grabbing");
 }
 
-slider.addEventListener('touchstart', swipeStart, { passive: true });
-slider.addEventListener('mousedown', swipeStart);
+slider.addEventListener("touchstart", swipeStart, { passive: true });
+slider.addEventListener("mousedown", swipeStart);
+
+// Theme
+
+const btnsTheme = document.querySelectorAll(".header__link-theme");
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  body.classList.add("dark-theme");
+} else {
+  body.classList.remove("dark-theme");
+}
+
+btnsTheme.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    body.classList.toggle("dark-theme");
+
+    if (body.classList.contains("dark-theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+});

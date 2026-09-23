@@ -312,3 +312,26 @@ checkSize(btnSizes);
 checkAdditives(btnAdditives);
 
 renderPrice();
+
+const btnsTheme = document.querySelectorAll(".header__link-theme");
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  body.classList.add("dark-theme");
+} else {
+  body.classList.remove("dark-theme");
+}
+
+btnsTheme.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    body.classList.toggle("dark-theme");
+
+    if (body.classList.contains("dark-theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
